@@ -6,57 +6,83 @@
     <title>Cybersecurity Portfolio</title>
 
     <style>
+
         body {
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
             background-color: #0d1117;
             color: white;
-            font-family: Arial, sans-serif;
         }
 
-        header {
-            background: #161b22;
-            padding: 20px;
+        nav {
+            background-color: #161b22;
+            padding: 15px;
             text-align: center;
             border-bottom: 2px solid #00ff88;
         }
 
-        h1 {
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
             color: #00ff88;
-            font-size: 40px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            color: #00ff88;
+            font-size: 50px;
         }
 
         .container {
-            width: 80%;
+            width: 85%;
             margin: auto;
-            padding: 20px;
+        }
+
+        .section-title {
+            color: #00ff88;
+            margin-top: 50px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .card {
-            background: #161b22;
+            background-color: #161b22;
             padding: 20px;
-            margin-top: 20px;
             border-radius: 10px;
+            flex: 1 1 300px;
             border-left: 5px solid #00ff88;
-        }
-
-        h2 {
-            color: #00ff88;
-        }
-
-        ul {
-            line-height: 2;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            padding: 30px;
+            margin-top: 50px;
             border-top: 1px solid #333;
         }
+
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
 
     <header>
         <h1>Cybersecurity Portfolio</h1>
@@ -65,39 +91,51 @@
 
     <div class="container">
 
-        <div class="card">
-            <h2>About Me</h2>
-            <p>
-                I am learning cybersecurity with hands-on labs and practical projects.
-                My interests include Linux, web security, ethical hacking,
-                network analysis, and Python scripting.
-            </p>
+        <h2 class="section-title">Skills</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Web Security</h3>
+                <p>Burp Suite, OWASP ZAP, Apache Hardening</p>
+            </div>
+
+            <div class="card">
+                <h3>Networking</h3>
+                <p>Wireshark, Nmap, Packet Analysis</p>
+            </div>
+
+            <div class="card">
+                <h3>Systems</h3>
+                <p>Kali Linux, Ubuntu Linux, Bash</p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h2>Skills & Tools</h2>
+        <h2 class="section-title">Projects</h2>
 
-            <ul>
-                <li>Kali Linux</li>
-                <li>Apache Web Server Hardening</li>
-                <li>Burp Suite</li>
-                <li>OWASP ZAP</li>
-                <li>Wireshark</li>
-                <li>Nmap</li>
-                <li>Hash Cracking</li>
-                <li>Python</li>
-            </ul>
-        </div>
+        <div class="card-container">
 
-        <div class="card">
-            <h2>Current Learning</h2>
+            <div class="card">
+                <h3>Apache Web Hardening</h3>
+                <p>Configured secure Apache server settings and security headers.</p>
+            </div>
 
-            <ul>
-                <li>TryHackMe Labs</li>
-                <li>Web Application Security</li>
-                <li>Linux Security</li>
-                <li>Bug Bounty Fundamentals</li>
-            </ul>
+            <div class="card">
+                <h3>Kali Linux Lab</h3>
+                <p>Hands-on cybersecurity practice environment with security tools.</p>
+            </div>
+
+            <div class="card">
+                <h3>Wireshark Analysis</h3>
+                <p>Analyzed network packets and monitored HTTP traffic.</p>
+            </div>
+
+            <div class="card">
+                <h3>Nmap Scanning</h3>
+                <p>Performed network enumeration and port scanning exercises.</p>
+            </div>
+
         </div>
 
     </div>
