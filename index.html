@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio</title>
+    <title>Lobsang Tashi | Cybersecurity Portfolio</title>
 
     <style>
 
@@ -19,6 +19,8 @@
             padding: 15px;
             text-align: center;
             border-bottom: 2px solid #00ff88;
+            position: sticky;
+            top: 0;
         }
 
         nav a {
@@ -26,6 +28,7 @@
             text-decoration: none;
             margin: 20px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -34,12 +37,20 @@
 
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
 
         header h1 {
             color: #00ff88;
-            font-size: 50px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
         }
 
         .container {
@@ -50,6 +61,8 @@
         .section-title {
             color: #00ff88;
             margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 32px;
         }
 
         .card-container {
@@ -64,6 +77,19 @@
             border-radius: 10px;
             flex: 1 1 300px;
             border-left: 5px solid #00ff88;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #00ff88;
+        }
+
+        ul {
+            line-height: 2;
         }
 
         footer {
@@ -75,39 +101,77 @@
 
     </style>
 </head>
+
 <body>
 
     <nav>
         <a href="#">Home</a>
         <a href="#">Skills</a>
         <a href="#">Projects</a>
+        <a href="#">Learning</a>
         <a href="#">Contact</a>
     </nav>
 
     <header>
-        <h1>Cybersecurity Portfolio</h1>
-        <p>Aspiring Cybersecurity Enthusiast</p>
+
+        <h1>Lobsang Tashi</h1>
+
+        <p>
+            Cybersecurity learner focused on web security,
+            Linux hardening, network analysis, ethical hacking,
+            and hands-on cybersecurity labs.
+            Currently building practical skills with Kali Linux,
+            Burp Suite, OWASP ZAP, Wireshark, Nmap, and Python scripting.
+        </p>
+
     </header>
 
     <div class="container">
 
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title">Skills & Tools</h2>
 
         <div class="card-container">
 
             <div class="card">
                 <h3>Web Security</h3>
-                <p>Burp Suite, OWASP ZAP, Apache Hardening</p>
+                <p>
+                    Burp Suite, OWASP ZAP,
+                    Apache Web Hardening,
+                    Security Headers,
+                    Web Application Testing
+                </p>
             </div>
 
             <div class="card">
                 <h3>Networking</h3>
-                <p>Wireshark, Nmap, Packet Analysis</p>
+                <p>
+                    Wireshark,
+                    Nmap,
+                    Packet Analysis,
+                    Network Enumeration,
+                    Port Scanning
+                </p>
             </div>
 
             <div class="card">
-                <h3>Systems</h3>
-                <p>Kali Linux, Ubuntu Linux, Bash</p>
+                <h3>Operating Systems</h3>
+                <p>
+                    Kali Linux,
+                    Ubuntu Linux,
+                    Windows,
+                    Linux Terminal,
+                    Bash Commands
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Programming</h3>
+                <p>
+                    Python,
+                    Basic Automation,
+                    Mini Projects,
+                    Beginner Scripting
+                </p>
             </div>
 
         </div>
@@ -117,23 +181,86 @@
         <div class="card-container">
 
             <div class="card">
-                <h3>Apache Web Hardening</h3>
-                <p>Configured secure Apache server settings and security headers.</p>
+                <h3>Apache Web Server Hardening</h3>
+                <p>
+                    Configured secure Apache settings,
+                    security headers, virtual hosts,
+                    and hardened web server configurations.
+                </p>
             </div>
 
             <div class="card">
-                <h3>Kali Linux Lab</h3>
-                <p>Hands-on cybersecurity practice environment with security tools.</p>
+                <h3>Kali Linux Security Lab</h3>
+                <p>
+                    Built a personal cybersecurity learning environment
+                    with practical security tools and Linux administration practice.
+                </p>
             </div>
 
             <div class="card">
-                <h3>Wireshark Analysis</h3>
-                <p>Analyzed network packets and monitored HTTP traffic.</p>
+                <h3>Wireshark Packet Analysis</h3>
+                <p>
+                    Analyzed HTTP traffic,
+                    captured packets,
+                    and studied network communication.
+                </p>
             </div>
 
             <div class="card">
-                <h3>Nmap Scanning</h3>
-                <p>Performed network enumeration and port scanning exercises.</p>
+                <h3>Nmap Scanning Exercises</h3>
+                <p>
+                    Practiced network discovery,
+                    service enumeration,
+                    and port scanning techniques.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Hash Cracking Practice</h3>
+                <p>
+                    Learned password hash identification
+                    and basic cracking techniques in lab environments.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Python Mini Projects</h3>
+                <p>
+                    Created beginner Python scripts and small projects
+                    for learning and experimentation.
+                </p>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Current Learning</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>TryHackMe</h3>
+                <p>
+                    Completing hands-on cybersecurity labs
+                    and learning offensive security fundamentals.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Bug Bounty Fundamentals</h3>
+                <p>
+                    Learning web vulnerabilities,
+                    reconnaissance,
+                    and ethical hacking methodologies.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Linux & Networking</h3>
+                <p>
+                    Strengthening Linux command-line skills,
+                    networking concepts,
+                    and security fundamentals.
+                </p>
             </div>
 
         </div>
@@ -141,7 +268,7 @@
     </div>
 
     <footer>
-        <p>Cybersecurity Portfolio 2026</p>
+        <p>© 2026 Lobsang Tashi | Cybersecurity Portfolio</p>
     </footer>
 
 </body>
