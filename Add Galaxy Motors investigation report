@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galaxy Motors Investigation</title>
+
+<style>
+
+body{
+    background:#0b1220;
+    color:#f8fafc;
+    font-family:Segoe UI, sans-serif;
+    max-width:1000px;
+    margin:auto;
+    padding:40px;
+    line-height:1.8;
+}
+
+h1,h2{
+    color:#38bdf8;
+}
+
+.card{
+    background:#111827;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid #334155;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#1e293b;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html">← Back to Portfolio</a>
+
+<h1>Galaxy Motors Re-Identification Investigation</h1>
+
+<div class="card">
+
+<h2>Scenario</h2>
+
+<p>
+This investigation focused on re-identifying individuals by
+correlating information gathered from multiple data sources,
+including website content, forum posts, email evidence,
+and publicly available information.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Objective</h2>
+
+<p>
+The goal was to determine the identities of individuals
+through evidence correlation while documenting the methodology
+used to reach each conclusion.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Investigation Methodology</h2>
+
+<ul>
+<li>Analyzed Galaxy Motors website content.</li>
+<li>Reviewed forum discussions and user posts.</li>
+<li>Examined email server evidence.</li>
+<li>Correlated hobbies, professions, locations, and personal details.</li>
+<li>Validated findings against available records.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Results</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>City</th>
+<th>Profession</th>
+</tr>
+
+<tr>
+<td>47</td>
+<td>Tobias Kuhn</td>
+<td>St. Gallen</td>
+<td>Financial Analyst</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Noah Noser</td>
+<td>Aarau</td>
+<td>Accountant</td>
+</tr>
+
+<tr>
+<td>84</td>
+<td>Fiona Schmid</td>
+<td>Kriens</td>
+<td>Software Development</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Key Findings</h2>
+
+<ul>
+<li>Website information revealed profession-related clues.</li>
+<li>Forum activity exposed personal information useful for identification.</li>
+<li>Email evidence contained additional correlation points.</li>
+<li>Multiple data sources were successfully combined to identify individuals.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Project Report</h2>
+
+<p>
+Download the complete investigation report.
+</p>
+
+<a href="Re-Identify_Challenge_Kalden_Leksang_2026.pdf">
+Download PDF Report →
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Lessons Learned</h2>
+
+<p>
+This project demonstrated how seemingly harmless pieces of
+information can be combined to reveal identities. It reinforced
+the importance of privacy awareness, OSINT techniques,
+evidence correlation, and analytical thinking during investigations.
+</p>
+
+</div>
+
+</body>
+</html>
