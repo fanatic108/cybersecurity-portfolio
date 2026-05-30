@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Leksang Kalden | Cybersecurity Portfolio</title>
 
 <style>
@@ -20,68 +19,97 @@ html{
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#0d1117;
-    color:white;
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#0b1220;
+    color:#f8fafc;
     line-height:1.7;
 }
 
-```css
+/* NAVBAR */
+
 nav{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #161b22;
-    padding: 15px 40px;
-    border-bottom: 2px solid #00ff88;
-    text-align: left;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#111827;
+    border-bottom:1px solid #1f2937;
 }
 
-nav a{
-    color: white;
-    text-decoration: none;
-    margin-right: 25px;
-    font-weight: bold;
-    transition: .3s;
+.nav-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
 }
 
-nav a:hover{
-    color: #00ff88;
+.logo{
+    color:#38bdf8;
+    font-size:24px;
+    font-weight:bold;
 }
-```
 
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+    transition:.3s;
+}
 
-header{
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
     text-align:center;
-    padding:80px 20px;
+    padding:100px 20px;
 }
 
 .profile-pic{
-    width:200px;
-    height:200px;
+    width:180px;
+    height:180px;
     border-radius:50%;
-    border:4px solid #00ff88;
+    border:4px solid #38bdf8;
     object-fit:cover;
-    margin-bottom:20px;
-}
-
-header h1{
-    color:#00ff88;
-    font-size:55px;
-    margin-bottom:10px;
-}
-
-header h2{
-    font-size:22px;
-    color:#cccccc;
     margin-bottom:25px;
 }
 
-header p{
-    max-width:900px;
+.hero h1{
+    font-size:56px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#38bdf8;
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:850px;
     margin:auto;
+    color:#cbd5e1;
     font-size:18px;
 }
+
+.hero-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:#0b1220;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* GENERAL */
 
 .container{
     width:90%;
@@ -89,12 +117,15 @@ header p{
     margin:auto;
 }
 
+section{
+    margin-bottom:100px;
+}
+
 .section-title{
-    color:#00ff88;
-    font-size:35px;
-    margin-top:60px;
-    margin-bottom:25px;
     text-align:center;
+    color:#38bdf8;
+    font-size:36px;
+    margin-bottom:35px;
 }
 
 .card-container{
@@ -105,10 +136,11 @@ header p{
 
 .card{
     flex:1 1 320px;
-    background:#161b22;
+    background:#111827;
     padding:25px;
-    border-radius:10px;
-    border-left:5px solid #00ff88;
+    border-radius:12px;
+    border:1px solid #1f2937;
+    box-shadow:0 0 15px rgba(0,0,0,0.25);
     transition:.3s;
 }
 
@@ -117,32 +149,59 @@ header p{
 }
 
 .card h3{
-    color:#00ff88;
-    margin-bottom:10px;
+    color:#38bdf8;
+    margin-bottom:12px;
 }
 
-.about{
-    background:#161b22;
-    padding:30px;
-    border-radius:10px;
+.card p{
+    color:#cbd5e1;
 }
+
+.about-box{
+    background:#111827;
+    padding:35px;
+    border-radius:12px;
+    border:1px solid #1f2937;
+}
+
+.about-box p{
+    color:#cbd5e1;
+}
+
+/* CONTACT */
+
+.contact-card{
+    text-align:center;
+}
+
+/* FOOTER */
 
 footer{
-    margin-top:70px;
+    border-top:1px solid #1f2937;
     text-align:center;
     padding:30px;
-    border-top:1px solid #333;
+    color:#94a3b8;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-header h1{
+.nav-container{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links a{
+    margin:0 10px;
+}
+
+.hero h1{
     font-size:40px;
 }
 
-nav a{
-    display:block;
-    margin:10px 0;
+.hero h2{
+    font-size:20px;
 }
 
 }
@@ -153,31 +212,39 @@ nav a{
 <body>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#learning">Learning</a>
-    <a href="#contact">Contact</a>
+
+<div class="nav-container">
+
+<div class="logo">LK</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
 </nav>
 
-<header>
+<section class="hero">
 
-<img src="profile.png" alt="Profile Picture" class="profile-pic">
+<img src="profile.png" class="profile-pic" alt="Profile Picture">
 
 <h1>Leksang Kalden</h1>
 
-<h2>Cybersecurity Analyst | Digital Forensics | Incident Response</h2>
+<h2>Aspiring Cybersecurity Professional</h2>
 
 <p>
-Aspiring cybersecurity professional focused on digital forensics,
-incident response, Linux administration, network security,
-web application security, and Python automation.
-
-Building practical experience through hands-on investigations,
-cybersecurity labs, forensic analysis, and technical projects.
+Building practical cybersecurity skills through digital forensics investigations,
+incident response exercises, network analysis, SQL database investigations,
+and Python-based security projects.
 </p>
 
-</header>
+<a href="#projects" class="hero-btn">View Projects</a>
+
+</section>
 
 <div class="container">
 
@@ -185,73 +252,18 @@ cybersecurity labs, forensic analysis, and technical projects.
 
 <h2 class="section-title">About Me</h2>
 
-<div class="about">
+<div class="about-box">
 
 <p>
-I am a cybersecurity student passionate about developing practical
-security skills through real-world investigations and technical projects.
+I am a cybersecurity student focused on developing real-world technical skills through
+hands-on investigations and practical projects.
 
-My interests include digital forensics, incident response,
-log analysis, network security, Linux administration,
-Python automation, and web security testing.
+My interests include Digital Forensics, Incident Response, Network Security,
+Linux Administration, Python Automation, and Security Operations.
 
-I enjoy solving cybersecurity challenges, investigating incidents,
+I enjoy investigating security incidents, analyzing logs, examining databases,
 and documenting findings in a structured and professional manner.
 </p>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2 class="section-title">Technical Skills</h2>
-
-<div class="card-container">
-
-<div class="card">
-<h3>Digital Forensics</h3>
-<p>
-Log Analysis<br>
-Evidence Collection<br>
-Timeline Reconstruction<br>
-IOC Identification<br>
-Incident Investigation
-</p>
-</div>
-
-<div class="card">
-<h3>Networking</h3>
-<p>
-Wireshark<br>
-Nmap<br>
-Packet Analysis<br>
-Network Enumeration<br>
-Traffic Inspection
-</p>
-</div>
-
-<div class="card">
-<h3>Programming</h3>
-<p>
-Python<br>
-SQL<br>
-SQLite<br>
-Automation<br>
-Bash Scripting
-</p>
-</div>
-
-<div class="card">
-<h3>Operating Systems</h3>
-<p>
-Kali Linux<br>
-Ubuntu Linux<br>
-Windows<br>
-Linux Terminal<br>
-System Administration
-</p>
-</div>
 
 </div>
 
@@ -275,16 +287,16 @@ and attack timeline reconstruction.
 <div class="card">
 <h3>SQLite Database Forensics</h3>
 <p>
-Performed forensic examination of a SQLite database using SQL queries
-to identify evidence, extract records, and document findings.
+Performed forensic examination of a SQLite database using SQL queries,
+evidence extraction, and investigative reporting.
 </p>
 </div>
 
 <div class="card">
 <h3>HTTP Log Analyzer (Python)</h3>
 <p>
-Developed a Python-based log analysis solution to process web server logs,
-analyze HTTP status codes, and generate reports.
+Developed a Python script to analyze web server logs,
+process HTTP status codes, and generate investigation reports.
 </p>
 </div>
 
@@ -299,8 +311,8 @@ logs, and supplied evidence to correlate findings and identify individuals.
 <div class="card">
 <h3>Apache Web Server Hardening</h3>
 <p>
-Configured security headers, secure virtual hosts,
-and hardened Apache server configurations.
+Configured secure Apache settings, security headers,
+virtual hosts, and hardened server configurations.
 </p>
 </div>
 
@@ -316,35 +328,49 @@ communications, and suspicious activity.
 
 </section>
 
-<section id="learning">
+<section id="skills">
 
-<h2 class="section-title">Current Learning</h2>
+<h2 class="section-title">Skills & Tools</h2>
 
 <div class="card-container">
 
 <div class="card">
-<h3>TryHackMe Labs</h3>
+<h3>Digital Forensics</h3>
 <p>
-Completing practical cybersecurity labs focused on
-network security, Linux, incident response, and web security.
+Log Analysis<br>
+Evidence Collection<br>
+Timeline Reconstruction<br>
+IOC Identification
 </p>
 </div>
 
 <div class="card">
-<h3>Security Automation</h3>
+<h3>Networking</h3>
 <p>
-Building Python scripts for log analysis,
-automation, and security-related tasks.
+Wireshark<br>
+Nmap<br>
+Traffic Analysis<br>
+Packet Inspection
 </p>
 </div>
 
 <div class="card">
-<h3>SOC Analyst Skills</h3>
+<h3>Programming</h3>
 <p>
-Learning threat detection,
-incident investigation,
-security monitoring,
-and SIEM concepts.
+Python<br>
+SQL<br>
+SQLite<br>
+Automation
+</p>
+</div>
+
+<div class="card">
+<h3>Operating Systems</h3>
+<p>
+Kali Linux<br>
+Ubuntu Linux<br>
+Windows<br>
+Linux Terminal
 </p>
 </div>
 
@@ -358,14 +384,14 @@ and SIEM concepts.
 
 <div class="card-container">
 
-<div class="card">
+<div class="card contact-card">
 <h3>Email</h3>
 <p>
 kalden.leksang@gmail.com
 </p>
 </div>
 
-<div class="card">
+<div class="card contact-card">
 <h3>GitHub</h3>
 <p>
 github.com/fanatic108
