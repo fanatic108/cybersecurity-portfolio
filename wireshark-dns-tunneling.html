@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireshark DNS Tunneling Analysis</title>
 
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#0b1220;
+    color:white;
+    max-width:1000px;
+    margin:auto;
+    padding:40px;
+}
+
+h1,h2{
+    color:#38bdf8;
+}
+
+img{
+    max-width:100%;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+a{
+    color:#38bdf8;
+}
+</style>
+
+</head>
+
+<body>
+
+<a href="index.html">← Back to Portfolio</a>
+
+<h1>Wireshark DNS Tunneling Analysis</h1>
+
+<h2>Objective</h2>
+
+<p>
+Analyze network traffic and identify suspicious activity using Wireshark.
+</p>
+
+<h2>Tools Used</h2>
+
+<ul>
+<li>Wireshark</li>
+<li>Linux</li>
+<li>DNS Analysis</li>
+</ul>
+
+<h2>Key Findings</h2>
+
+<ul>
+<li>Attack Type: DNS Tunneling</li>
+<li>Source IP: 192.168.5.10</li>
+<li>Operating System: Windows</li>
+<li>Initial Malicious Activity: Frame 27</li>
+<li>Likely Goal: Data Exfiltration</li>
+</ul>
+
+<h2>Indicators of Compromise</h2>
+
+<ul>
+<li>Long DNS Queries</li>
+<li>High Entropy Subdomains</li>
+<li>Repeated Requests</li>
+<li>Automated Query Patterns</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>
+The investigation identified a DNS tunneling attack likely used for covert communication and data exfiltration.
+</p>
+
+</body>
+</html>
