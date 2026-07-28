@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AppLocker & Code-Signing Certificate Investigation</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    h1 {
+      color: #0b5ed7;
+    }
+
+    h2 {
+      color: #174ea6;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    code, pre {
+      background: #1e1e1e;
+      color: #f1f1f1;
+      padding: 12px;
+      border-radius: 5px;
+    }
+
+    pre {
+      overflow-x: auto;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e7f1ff;
+      padding: 6px 10px;
+      margin: 4px;
+      border-radius: 5px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #0b5ed7;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background: #084298;
+    }
+
+    a {
+      color: #0b5ed7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a href="index.html">← Back to Portfolio</a></p>
+
+  <h1>Windows AppLocker & Code-Signing Certificate Investigation</h1>
+
+  <p>
+    Investigation of a Windows application that was blocked by AppLocker
+    after a software update. The analysis focused on Authenticode digital
+    signatures, X.509 certificates, PKI trust chains and AppLocker
+    publisher rules.
+  </p>
+
+  <div class="card">
+    <h2>Scenario</h2>
+
+    <p>
+      A previous version of a remote-support application executed
+      successfully, while a newly released version was blocked.
+    </p>
+
+    <p>
+      I compared the working and blocked executables to determine why
+      Windows could no longer validate the new application as an
+      authorised publisher.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Tools & Technologies</h2>
+
+    <span class="tag">Kali Linux</span>
+    <span class="tag">OpenSSL</span>
+    <span class="tag">osslsigncode</span>
+    <span class="tag">Windows PowerShell</span>
+    <span class="tag">AppLocker</span>
+    <span class="tag">X.509</span>
+    <span class="tag">PKI</span>
+    <span class="tag">Authenticode</span>
+  </div>
+
+  <div class="card">
+    <h2>Investigation</h2>
+
+    <p>
+      I analysed the AppLocker policy, Windows Trusted Root Certificate
+      Store and the digital signatures embedded in both application
+      versions.
+    </p>
+
+    <p>The working executable contained the expected certificate chain:</p>
+
+    <pre>
+UmagDev RootCA (OU=Security)
+        ↓
+UmagDev IntermediateCA (OU=Security)
+        ↓
+UmagDev CodeSigningCert
+        ↓
+remote_v1.exe
+    </pre>
+
+    <p>
+      The new executable contained the code-signing certificate but did
+      not contain the required intermediate CA certificate.
+    </p>
+
+    <pre>
+remote_v2.exe
+CodeSigningCert
+Issuer:
+OU=Sec
+CN=UmagDev IntermediateCA
+    </pre>
+  </div>
+
+  <div class="card">
+    <h2>Key Findings</h2>
+
+    <ul>
+      <li>
+        The Windows AppLocker executable policy was enabled and used a
+        publisher-based allow rule for UmagDev.
+      </li>
+
+      <li>
+        The UmagDev Root CA was present in the Windows Trusted Root
+        Certification Authorities store.
+      </li>
+
+      <li>
+        The working executable included the required intermediate
+        certificate.
+      </li>
+
+      <li>
+        The new executable did not include the required intermediate CA
+        certificate.
+      </li>
+
+      <li>
+        A certificate issuer difference was identified:
+        <strong>OU=Security</strong> in the working chain versus
+        <strong>OU=Sec</strong> in the new signing certificate.
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Root Cause</h2>
+
+    <p>
+      The certificate chain for the new executable could not be
+      successfully constructed to the trusted UmagDev Root CA.
+    </p>
+
+    <p>
+      Because the publisher could not be validated through the expected
+      certificate chain, the executable did not satisfy the enforced
+      AppLocker publisher rule and was blocked.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Security Recommendations</h2>
+
+    <ol>
+      <li>
+        Include the correct intermediate CA certificate in the
+        Authenticode signature and verify the complete certificate chain
+        before software distribution.
+      </li>
+
+      <li>
+        Implement automated release validation to verify digital
+        signatures, certificate chains, issuer information and trust
+        before publishing software.
+      </li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Skills Demonstrated</h2>
+
+    <span class="tag">Certificate Analysis</span>
+    <span class="tag">PKI Troubleshooting</span>
+    <span class="tag">Digital Signature Analysis</span>
+    <span class="tag">Application Control</span>
+    <span class="tag">Windows Security</span>
+    <span class="tag">Security Troubleshooting</span>
+  </div>
+
+  <div class="card">
+    <h2>Full Technical Report</h2>
+
+    <p>
+      The complete investigation contains the technical evidence,
+      certificate comparison and remediation recommendations.
+    </p>
+
+    <a class="button"
+       href="applocker-certificate-investigation.pdf"
+       target="_blank">
+       View Full PDF Report
+    </a>
+  </div>
+
+</body>
+</html>
